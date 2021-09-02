@@ -10,6 +10,3 @@ import "../styles/index.scss";
 
 //import your own components
 import SecondsCounter from "./component/home.jsx";
-
-//render your react application
-ReactDOM.render(<SecondsCounter />, document.querySelector("#app"));
