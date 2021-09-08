@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import ReactDOM from "react-dom";
 
-//create your first component
+//My first component
 function SecondsCounter(props) {
 	return (
 		<div className="bigDiv">
@@ -17,6 +17,7 @@ function SecondsCounter(props) {
 }
 
 SecondsCounter.propTypes = {
+	//validación de props
 	digitOne: PropTypes.number,
 	digitTwo: PropTypes.number,
 	digitThree: PropTypes.number,
@@ -28,13 +29,15 @@ SecondsCounter.propTypes = {
 let counter = 0;
 
 setInterval(() => {
-	const six = Math.floor(counter / 100000);
+	//setInterval() hace que una función se repita con un tiempo de retraso entre cada ejecución.
+	//Se pasan dos parámetros a setInterval(): la función que deseo llamar y el tiempo en milisegundos a retrasar cada ejecución de la función.
+	//setInterval() continuará ejecutándose hasta que sea borrada. clearInterval().
+	const six = Math.floor(counter / 100000); //Math.floor(x)   Devuelve el máximo entero menor o igual a un número
 	const five = Math.floor(counter / 10000);
 	const four = Math.floor(counter / 1000);
 	const three = Math.floor(counter / 100);
 	const two = Math.floor(counter / 10);
 	const one = Math.floor(counter / 1);
-	counter++;
 	ReactDOM.render(
 		<SecondsCounter
 			digitOne={one}
@@ -46,6 +49,6 @@ setInterval(() => {
 		/>,
 		document.querySelector("#app")
 	);
-}, 1000);
+}, 1000); //segundo parametro de setInterval, cada 1 segundo
 
 export default SecondsCounter;
