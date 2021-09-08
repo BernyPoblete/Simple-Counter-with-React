@@ -8,15 +8,15 @@ function SecondsCounter(props) {
 	//en first: digitOne=11 entonces 11 % 10= 1, 12 % 10= 2, 13 % 10= 3... siempre entrega 1 digito (unidad del counter)
 	return (
 		<div className="bigDiv">
-			<div className="icon">
+			<div className="icon box">
 				<i className="far fa-clock"></i>
 			</div>
-			<div className="sixth">{props.digitSix % 10}</div>
-			<div className="fiveth">{props.digitFive % 10}</div>
-			<div className="fourth">{props.digitFour % 10}</div>
-			<div className="thirth">{props.digitThree % 10}</div>
-			<div className="second">{props.digitTwo % 10}</div>
-			<div className="first">{props.digitOne % 10}</div>
+			<div className="number box">{props.digitSix % 10}</div>
+			<div className="number box">{props.digitFive % 10}</div>
+			<div className="number box">{props.digitFour % 10}</div>
+			<div className="number box">{props.digitThree % 10}</div>
+			<div className="number box">{props.digitTwo % 10}</div>
+			<div className="number box">{props.digitOne % 10}</div>
 		</div>
 	);
 }
